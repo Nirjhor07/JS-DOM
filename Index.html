@@ -1,11 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Just Learning Dom</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nirjhor</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="h1ooo">Just Learning Dom</h1>
+      <!-- my fav foods -->
+      <ul>
+        <li class="h1ooo">Pasta</li>
+        <li class="h1ooo">Pizza</li>
+        <li class="h1ooo">Burger</li>
+        <li class="h1ooo">Fish</li>
+        <li class="h1ooo">Rupchanda</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1 id="b2">Just Learning Dom</h1>
+      <!-- my fav movies -->
+      <ul>
+        <li>Rockstar</li>
+        <li id="catch">catch me if you can</li>
+        <li>Bomkyesh</li>
+        <li>Sherlock</li>
+        <li>Game of thrones</li>
+      </ul>
+    </section>
+  </body>
+  <script>
+    const h1Tag = document.getElementsByClassName("h1ooo");
+    console.log(h1Tag);
+    for (tag of h1Tag) {
+      console.log(tag.innerText);
+    }
+
+    const b2 = document.getElementById("b2");
+    b2.innerText = "Dom and javascript manupulation";
+    console.log(b2.innerText);
+  </script>
+
+  <script src="styles/js/scripts.js"></script>
 </html>
