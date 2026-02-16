@@ -17,11 +17,11 @@ console.log(sections);
 for (const section of sections) {
   section.classList.add("styles");
 }
-
-const specifcSection = document.querySelector("#hudai");
-console.log(specifcSection);
-if (specifcSection.classList.contains("styles")) {
-  specifcSection.classList.toggle("styles");
-} else {
-  console.log("do nothing");
-}
+// this block will execute bcz the section #hudai has the class '.styles'
+// const specifcSection = document.querySelector("#hudai");
+// console.log(specifcSection);
+// if (specifcSection.classList.contains("styles")) {
+//   specifcSection.classList.toggle("styles");
+// } else {
+//   console.log("do nothing");
+// }
