@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <section>
+    <section id="hudai">
       <h1 class="h1ooo">Just Learning Dom</h1>
       <!-- my fav foods -->
       <ul>
@@ -19,19 +19,18 @@
       </ul>
     </section>
 
-    <section>
+    <section class="movie">
       <h1 id="b2">Just Learning Dom</h1>
       <!-- my fav movies -->
       <ul>
         <li>Rockstar</li>
         <li id="catch">catch me if you can</li>
-        <li>Bomkyesh</li>
+        <li id="goyenda">Bomkyesh</li>
         <li>Sherlock</li>
         <li>Game of thrones</li>
       </ul>
     </section>
-  </body>
-  <script>
+    <!-- <script class="inline-script">
     const h1Tag = document.getElementsByClassName("h1ooo");
     console.log(h1Tag);
     for (tag of h1Tag) {
@@ -41,7 +40,38 @@
     const b2 = document.getElementById("b2");
     b2.innerText = "Dom and javascript manupulation";
     console.log(b2.innerText);
-  </script>
+    b2.style.backgroundColor = "lightblue";
 
-  <script src="styles/js/scripts.js"></script>
+    const goyendaQuery = document.querySelector(".movie #goyenda");
+    console.log(goyendaQuery.innerText);
+    // .classlist.add this add a prebuild class to the selector
+    goyendaQuery.classList.add("bg-green");
+
+    //remove class
+    // goyendaQuery.classList.remove('bg-green');
+
+    //replace class in parameter we should [pass two arguments one is the prev class and the second is the class name we want to replace with]
+    // goyendaQuery.classList.replace("bg-green", "bg-red");
+    // goyendaQuery.querySelector
+
+    //toggle is almost the same as replace
+    goyendaQuery.classList.toggle("bg-red");
+    goyendaQuery.style.marginLeft = "200px";
+    goyendaQuery.style.textAlign = "center";
+    goyendaQuery.style.paddingLeft = "20px";
+
+    console.log(goyendaQuery.getAttribute("id"));
+    console.log(goyendaQuery.getAttribute("class"));
+
+    goyendaQuery.setAttribute("id", "my-id");
+    //after setting the attribute
+    console.log(goyendaQuery.getAttribute("id"));
+
+ 
+  </script> -->
+    <!-- anta scripts -->
+    <!-- <script src="styles/js/scripts.js"></script> -->
+
+    <script src="styles/js/querySelector.js"></script>
+  </body>
 </html>
