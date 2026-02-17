@@ -15,7 +15,8 @@ function makeBisqueClr() {
 }
 
 //add event listenner
-// option 1
+/*  .addEventListener('type of event', function )
+ in this case the type of event is onclick = 'click' */
 document
   .getElementById("make-green-clr")
   .addEventListener("click", function makeGreen() {
