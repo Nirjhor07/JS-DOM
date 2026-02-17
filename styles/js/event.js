@@ -5,12 +5,19 @@ makeRedBtn.onclick = function makeRed() {
   document.body.style.backgroundColor = "purple";
 };
 
-
-// option 3 
+// option 3
 const makeBisque = document.getElementById("make-bisque-clr");
 
 makeBisque.onclick = makeBisqueClr;
 
-function makeBisqueClr(){
-    document.body.style.backgroundColor = 'blanchedalmond';
+function makeBisqueClr() {
+  document.body.style.backgroundColor = "blanchedalmond";
 }
+
+//add event listenner
+// option 1
+document
+  .getElementById("make-green-clr")
+  .addEventListener("click", function makeGreen() {
+    document.body.style.backgroundColor = "lightGreen";
+  });
