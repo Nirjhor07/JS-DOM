@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Events</title>
+  </head>
+  <body>
+    <main>
+      <h1>Lets explore dom events</h1>
+      <button onclick="console.log('dont touch me')">Click me!</button>
+      <button id="make-aqua-clr">make aqua</button>
+      <button id="make-purple-clr">make purple</button>
+      <button id="make-bisque-clr">Make bisque</button>
+      <!-- Inline event / not suggestted  -->
+      <button onclick="document.body.style.backgroundColor = 'red'">
+        make red
+      </button>
+    </main>
+    <!-- Option 1 -->
+    <script>
+      const makeAquaClr = document.getElementById("make-aqua-clr");
+      makeAquaClr.onclick = function makeAqua() {
+        document.body.style.backgroundColor = "aqua";
+      };
+    </script>
+    <script src="../styles/js/event.js"></script>
+  </body>
+</html>
