@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler and dynamic changes</title>
+  </head>
+  <body>
+    <main>
+      <!-- static value change when the button is clicked  -->
+      <h1 id="nameIs">My name is -_-</h1>
+      <button id="name-click">Click me to see my name</button>
+      <br />
+      <br />
+      <!-- dynamically change innter text taken from user -->
+      <p id="fieldToBeChanged">Enter you name</p>
+      <input id="inputName" placeholder="typer your name" type="text" />
+      <button id="Update-name">Update name</button>
+      <br /><br /><br />
+
+      <!-- another way of static value change when the button pressed or clicked  -->
+      <p id="status">My status depends on your click</p>
+      <p>Press login button to see my status</p>
+      <button id="log-info">Log in</button>
+    </main>
+
+    <!-- embedded script -->
+    <script>
+      document
+        .getElementById("log-info")
+        .addEventListener("click", function () {
+          //   console.log("im clicked");
+          document.getElementById("status").innerText =
+            "Succesfully logged in!!!!";
+        });
+    </script>
+    <script src="../styles/js/dynamicEvent.js"></script>
+  </body>
+</html>
