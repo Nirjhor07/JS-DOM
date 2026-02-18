@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delegate Concepts</title>
+  </head>
+  <body id="body">
+    <h2 id="body-title">This Demo is written to practise delegate concepts</h2>
+    <section id="section-t">
+      <ol id="item-container">
+        <li class="item">item-1</li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+        <li class="item">item-5</li>
+        <li class="item">item-6</li>
+        <li class="item">item-7</li>
+        <li class="item">item-8</li>
+        <li class="item">item-9</li>
+      </ol>
+      <button id="add-item-btn">Add item</button>
+    </section>
+
+    <!-- Embeded Script tag -->
+    <script>
+      // here call by class name which actuallly is a child class
+      //   const items = document.getElementsByClassName("item");
+      //   //   console.log(items)
+      //   for (const item of items) {
+      //     item.addEventListener("click", function (event) {
+      //       //   console.log(event.target,"Item is clicked");
+      //       //   const name = event.target.parentNode;
+      //       //   console.log(name);
+      //       event.target.parentNode.removeChild(event.target);
+      //     });
+      //   }
+
+      const items = document.getElementById("item-container");
+      items.addEventListener("click", function (event) {
+        // const eeevent = event.target;
+        // console.log(eeevent);
+        event.target.parentNode.removeChild(event.target);
+      });
+
+      //adding item to the list by clicking btn
+      document
+        .getElementById("add-item-btn")
+        .addEventListener("click", function (event) {
+          //   console.log("btn clicked");
+
+          // creating a new element
+          const li1 = document.createElement("li");
+          li1.innerText = "This is newly creatted or added";
+          //   console.log(li1);
+
+          // finding the parent
+          const parentNodeEl = document.getElementById("item-container");
+
+          // append the newly cretted element by btn clicked
+          parentNodeEl.appendChild(li1);
+        });
+    </script>
+  </body>
+</html>
