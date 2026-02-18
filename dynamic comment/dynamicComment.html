@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Comment Update</title>
+  </head>
+  <style>
+    .comment-box-style {
+      color: rgb(46, 7, 153);
+      background-color: blanchedalmond;
+      border: 2px solid salmon;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      text-align: justify;
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Dynamic Comment post by user</h1>
+      <section id="comment-container">
+        <p class="comment-box-style">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          tenetur libero omnis maxime in? Quia dignissimos nesciunt labore qui
+          cupiditate laboriosam quas voluptates impedit, doloremque pariatur
+          perspiciatis id velit, ab fugit maiores laborum rem eos saepe error
+          enim magnam ullam voluptate. Error cumque voluptatem iusto earum
+          dolore cum beatae alias?
+        </p>
+        <p class="comment-box-style">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          tenetur libero omnis maxime in? Quia dignissimos nesciunt labore qui
+          cupiditate laboriosam quas voluptates impedit, doloremque pariatur
+          perspiciatis id velit, ab fugit maiores laborum rem eos saepe error
+          enim magnam ullam voluptate. Error cumque voluptatem iusto earum
+          dolore cum beatae alias?
+        </p>
+        <p class="comment-box-style">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          tenetur libero omnis maxime in? Quia dignissimos nesciunt labore qui
+          cupiditate laboriosam quas voluptates impedit, doloremque pariatur
+          perspiciatis id velit, ab fugit maiores laborum rem eos saepe error
+          enim magnam ullam voluptate. Error cumque voluptatem iusto earum
+          dolore cum beatae alias?
+        </p>
+      </section>
+      <div>
+        <textarea name="" id="input-text-user" cols="90" rows="7"></textarea>
+        <button id="post-cmnt">Post Comment</button>
+      </div>
+    </main>
+
+    <!-- embedded script to dynamically post the comment written by user -->
+    <script>
+      document
+        .getElementById("post-cmnt")
+        .addEventListener("click", function () {
+          //   console.log("im clicked ");
+
+          // STEP-1: GET THE INPUT VALUE AND STORE IT TO ONE VARIABLE
+          const userInput = document.getElementById("input-text-user");
+          const userInputN = userInput.value;
+          //console.log(userInputN)
+
+          // step-2 : assigning the new value from user to the parent where it will be postted
+          const newP = document.createElement("p");
+          newP.innerText = userInputN;
+
+          //step - 3 : finding the root
+          const mainCls = document.getElementById("comment-container");
+        //   console.log(mainCls);
+
+          // step - 4 : append newP to the root or parent
+          mainCls.appendChild(newP);
+
+          // step - 5 : clear the input field
+          userInput.value = "";
+
+          // step - 6 : adding class to the newP 
+          newP.classList.add('comment-box-style')
+        });
+    </script>
+  </body>
+</html>
