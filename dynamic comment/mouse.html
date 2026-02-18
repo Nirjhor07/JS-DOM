@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Hover dynamic change</title>
+  </head>
+  <body>
+    <h1 id="title">Learning Mouse effect using Dom manupulation</h1>
+    <input type="text" placeholder="Type your name" id="input-text" />
+    <button id="btn-try-me" disabled>Try me</button>
+
+    <!-- Embedded script -->
+    <script>
+      //   document
+      //     .getElementById("btn-try-me")
+      //     .addEventListener("mouseenter", function () {
+      //       console.log("mouse aise re vhai");
+      //     });
+
+      //   document
+      //     .getElementById("btn-try-me")
+      //     .addEventListener("mouseleave", function () {
+      //       console.log("mouse gese re vhai");
+      //     });
+
+      const userInput = document
+        .getElementById("input-text")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value;
+          console.log(text);
+          const btn = document.getElementById("btn-try-me");
+          if (text === "Try me") {
+            // console.log('matched')
+            btn.removeAttribute("disabled");
+            const title = document.getElementById("title");
+            title.style.display = "none";
+          } else {
+            btn.setAttribute("disabled", true);
+          }
+        });
+    </script>
+  </body>
+</html>
